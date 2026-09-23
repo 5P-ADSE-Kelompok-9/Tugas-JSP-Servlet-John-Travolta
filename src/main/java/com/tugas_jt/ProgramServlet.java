@@ -24,8 +24,11 @@ public class ProgramServlet extends HttpServlet {
     }
 
     public String bisaNabung (double pemasukan, double pengeluaran) {
+        double tabungan;
         if (pemasukan > pengeluaran) {
-            return "Bisa menabung";
+            tabungan = pemasukan - pengeluaran;
+            return "Bisa menabung sebanyak: Rp" + tabungan;
+
         } else if (pemasukan == pengeluaran) {
             return "Tidak bisa menabung";
         } else {
